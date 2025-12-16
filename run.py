@@ -17,7 +17,7 @@ from utils.logger import log_success, log_error, log_info, YELLOW, RESET, CYAN
 
 password = None
 VENV_DIR = "venv"  # Name or path to the virtual environment
-LICT_CMD = "lict"
+LICT_CMD = "liscopelens"
 SYSTEM_SPC = {
     "standard": "docker_oh_standard",
     "small": "docker_oh_small",
@@ -269,8 +269,8 @@ def check_and_install_cmd(venv_dir, cmd):
         log_success(f"'{cmd}' is already installed.")
     except FileNotFoundError:
         # Command not found, install via pip
-        log_info(f"'{cmd}' not found. Installing liscoplens via pip...")
-        subprocess.check_call([str(pip_executable), "install", "liscoplens"])
+        log_info(f"'{cmd}' not found. Installing liscopelens via pip...")
+        subprocess.check_call([str(pip_executable), "install", "liscopelens"])
         log_success(f"'{cmd}' installed successfully.")
 
 
@@ -425,7 +425,7 @@ if __name__ == "__main__":
     log_info(args.oh_path + os.path.sep)
     run_in_venv(VENV_DIR, ["python", os.path.normpath("./utils/scan.py"), args.oh_path + os.path.sep])
 
-    log_info("------ Running LICT ------", prefix="\n")
+    log_info("------ Running liscopelens ------", prefix="\n")
     scancode_result_dir = args.oh_path.split(os.path.sep)[-1] + "-license"
     log_info(scancode_result_dir)
     run_in_venv(

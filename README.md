@@ -1,10 +1,10 @@
-补充缺失的参数说明后，完整的 **Lict: OneClick** 文档如下：
+补充缺失的参数说明后，完整的 **liscopelens: OneClick** 文档如下：
 
-# Lict: OneClick
+# liscopelens: OneClick
 
 [English Version](/README.en.md)
 
-[Lict](https://gitee.com/openharmony-sig/compliance_license_compatibility/)（LiScopeLens）工具一键启动脚本。
+[liscopelens](https://gitee.com/openharmony-sig/compliance_license_compatibility/)（LiScopeLens）工具一键启动脚本。
 
 ## Time Overhead
 
@@ -13,7 +13,7 @@
 
 ## Requirements
 
-1. **Python** >= 3.11
+1. **Python** >= 3.12
 2. **Docker**
 3. `pip install -r reqirements.txt`
 
@@ -22,7 +22,7 @@
 ```shell
 usage: run.py [-h] [--system_spec SYSTEM_SPEC] [--tag TAG] [--oh_path OH_PATH] [--lict_cmd LICT_CMD] [--product_name PRODUCT_NAME] [--output OUTPUT] [--shadow SHADOW]
 
-Lict setup script with Docker image support.
+liscopelens setup script with Docker image support.
 
 options:
   -h, --help            show this help message and exit
@@ -30,7 +30,7 @@ options:
                         System specification key or direct input.
   --tag TAG             Docker image tag (default: 3.2).
   --oh_path OH_PATH     Openharmony source code path (default: ./oh-source).
-  --lict_cmd LICT_CMD   LICT command name (default: lict).
+  --lict_cmd LICT_CMD   liscopelens command name (default: liscopelens).
   --product_name PRODUCT_NAME
                         Product name (default: rk3568).
   --output OUTPUT       Results output path (default: ./output)
@@ -54,7 +54,7 @@ options:
   OpenHarmony 源代码路径（默认值：`./oh-source`）。
 
 - `--lict_cmd LICT_CMD`  
-  LICT 命令名称（默认值：`lict`）。
+  liscopelens 命令名称（默认值：`liscopelens`）。
 
 - `--product_name PRODUCT_NAME`  
   产品名称（默认值：`rk3568`）。
@@ -91,7 +91,7 @@ options:
    如需指定其他参数，可以参考以下示例：
 
    ```shell
-   python run.py --system_spec "spec_key" --tag "3.2" --oh_path "/path/to/oh-source-code" --lict_cmd "lict" --product_name "rk3568" --output "/path/to/output" --shadow "/path/to/shadow.json"
+   python run.py --system_spec "spec_key" --tag "3.2" --oh_path "/path/to/oh-source-code" --lict_cmd "liscopelens" --product_name "rk3568" --output "/path/to/output" --shadow "/path/to/shadow.json"
    ```
 
 ## 备注

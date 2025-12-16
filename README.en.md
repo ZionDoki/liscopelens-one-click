@@ -1,6 +1,6 @@
-# Lict: OneClick
+# liscopelens: OneClick
 
-[Lict](https://gitee.com/openharmony-sig/compliance_license_compatibility/) (LiScopeLens) tool one-click startup script.
+[liscopelens](https://gitee.com/openharmony-sig/compliance_license_compatibility/) (LiScopeLens) tool one-click startup script.
 
 ## Requirements
 
@@ -18,7 +18,7 @@
 ```shell
 usage: run.py [-h] [--system_spec SYSTEM_SPEC] [--tag TAG] [--oh_path OH_PATH] [--lict_cmd LICT_CMD] [--product_name PRODUCT_NAME] [--output OUTPUT] [--shadow SHADOW]
 
-Lict setup script with Docker image support.
+liscopelens setup script with Docker image support.
 
 options:
   -h, --help            show this help message and exit
@@ -26,7 +26,7 @@ options:
                         System specification key or direct input.
   --tag TAG             Docker image tag (default: 3.2).
   --oh_path OH_PATH     OpenHarmony source code path (default: ./oh-source).
-  --lict_cmd LICT_CMD   LICT command name (default: lict).
+  --lict_cmd LICT_CMD   liscopelens command name (default: liscopelens).
   --product_name PRODUCT_NAME
                         Product name (default: rk3568).
   --output OUTPUT       Results output path (default: ./output)
@@ -50,7 +50,7 @@ options:
   OpenHarmony source code path (default: `./oh-source`).
 
 - `--lict_cmd LICT_CMD`  
-  LICT command name (default: `lict`).
+  liscopelens command name (default: `liscopelens`).
 
 - `--product_name PRODUCT_NAME`  
   Product name (default: `rk3568`).
@@ -88,7 +88,7 @@ options:
     To specify additional parameters, refer to the following example:
 
     ```shell
-    python run.py --system_spec "spec_key" --tag "3.2" --oh_path "/path/to/oh-source-code" --lict_cmd "lict" --product_name "rk3568" --output "/path/to/output" --shadow "/path/to/shadow.json"
+    python run.py --system_spec "spec_key" --tag "3.2" --oh_path "/path/to/oh-source-code" --lict_cmd "liscopelens" --product_name "rk3568" --output "/path/to/output" --shadow "/path/to/shadow.json"
     ```
 
 ## Notes
@@ -100,7 +100,7 @@ options:
 ## Additional Information
 
 - **System Specifications:** The `--system_spec` option allows you to specify different system configurations. Refer to the [SYSTEM_SPEC](#) section in the script for available options or provide a direct input.
-- **LICT Command:** The `--lict_cmd` option lets you define a custom name for the LICT command if it differs from the default `lict`.
+- **liscopelens Command:** The `--lict_cmd` option lets you define a custom name for the liscopelens command if it differs from the default `liscopelens`.
 
 ### Shadow Parameter Details
 
