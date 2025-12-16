@@ -1,0 +1,13 @@
+*.log
+venv
+scancode*
+compliance*
+__pycache__
+*-license
+*-source
+oh-*
+oh_*
+*.zip
+*.json
+output
+*.gml
