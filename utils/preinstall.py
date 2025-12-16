@@ -89,6 +89,8 @@ def get_scancode():
         log_error(f"An error occurred: {e}")
         sys.exit(1)
 
+    original_dir = os.getcwd()
     os.chdir(dir_path)
     log_info("Running scancode --help...")
     subprocess.run(["./scancode" if os_type in ["linux", "macos"] else "scancode.bat", "--help"])
+    os.chdir(original_dir)
