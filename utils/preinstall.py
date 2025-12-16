@@ -72,18 +72,18 @@ def get_scancode():
         log_info("Scancode toolchain already exists.")
         return
     
-    python_version = f"{sys.version_info.major}.{sys.version_info.minor if sys.version_info.minor < 12 else 12}"
+    python_version = f"{sys.version_info.major}.{sys.version_info.minor if sys.version_info.minor < 13 else 13}"
     log_info(f"Python version: {python_version}, downloading and installing scancode...")
 
-    base_url = "https://github.com/nexB/scancode-toolkit/releases/download/v32.1.0/"
+    base_url = "https://github.com/nexB/scancode-toolkit/releases/download/v32.4.1/"
     file_extension = "tar.gz" if os_type in ["linux", "macos"] else "zip"
-    file_name = f"scancode-toolkit-v32.1.0_py{python_version}-{os_type}.{file_extension}"
+    file_name = f"scancode-toolkit-v32.4.1_py{python_version}-{os_type}.{file_extension}"
     download_url = base_url + file_name
 
     try:
         download_file(download_url, file_name)
         extract_file(file_name, ".")
-        os.rename(f"scancode-toolkit-v32.1.0", dir_path)
+        os.rename(f"scancode-toolkit-v32.4.1", dir_path)
         os.remove(file_name)
     except Exception as e:
         log_error(f"An error occurred: {e}")
